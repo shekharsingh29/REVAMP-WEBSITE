@@ -1,0 +1,204 @@
+.cbutton {
+	position: absolute;
+display: block;
+z-index: 1;
+	
+	color: #ffd100;
+	font-size: 1.4em;
+
+	-webkit-transition: color 1.9s;
+	transition: color 1.9s;
+	-webkit-tap-highlight-color: #ffd100;
+}
+
+.cbutton.cbutton--click,
+.cbutton:focus {
+	outline: none;
+	color: #ffd100;
+}
+
+
+
+.cbutton::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -35px 0 0 -35px;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	pointer-events: none;
+}
+
+
+
+
+
+
+/* Individual Effects */
+
+
+/* Novak 
+.cbutton--effect-novak::after {
+	background: rgba(111,148,182,0.25);
+}
+
+.cbutton--effect-novak.cbutton--click::after {
+	-webkit-animation: anim-effect-novak 0.5s forwards;
+	animation: anim-effect-novak 0.5s forwards;
+}
+
+@-webkit-keyframes anim-effect-novak {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.1, 0.1, 1);
+		transform: scale3d(0.1, 0.1, 1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale3d(8, 8, 1);
+		transform: scale3d(8, 8, 1);
+	}
+}
+
+@keyframes anim-effect-novak {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.1, 0.1, 1);
+		transform: scale3d(0.1, 0.1, 1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale3d(8, 8, 1);
+		transform: scale3d(8, 8, 1);
+	}
+}
+/* jagoda */
+
+.cbutton--effect-jagoda::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	pointer-events: none;
+}
+
+.cbutton--effect-jagoda::after {
+	margin: -25px 0 0 -25px;
+	width: 50px;
+	height: 50px;
+	background: rgba(111,148,182,0.25) ;
+}
+
+.cbutton--effect-jagoda::before,
+.cbutton--effect-jagoda::after {
+	box-shadow: 0 0 0 2px #ffd900;
+	background: #ffd900
+}
+
+.cbutton--effect-jagoda.cbutton--click::before,
+.cbutton--effect-jagoda.cbutton--click::after {
+	-webkit-animation-name: anim-effect-jagoda-2, anim-effect-jagoda-1;
+	animation-name:anim-effect-jagoda-2, anim-effect-jagoda-1;
+	-webkit-animation-duration: 1.2s;
+	animation-duration: 1.2s;
+	-webkit-animation-iteration-count: 5;
+	animation-iteration-count: 5;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation: anim-effect-novak 0.5s forwards;
+	animation: anim-effect-novak 0.5s forwards;
+	
+
+}
+
+.cbutton--effect-jagoda.cbutton--click::after {
+	-webkit-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+	-webkit-animation: anim-effect-novak 0.5s forwards;
+	animation: anim-effect-novak 0.5s forwards;
+
+
+
+}
+
+
+
+
+
+@-webkit-keyframes anim-effect-jagoda-1 {
+	0%, 100% {
+		opacity: 0;
+	}
+	40%, 60% {
+		opacity: 1;
+	}
+}
+
+@keyframes anim-effect-jagoda-1 {
+	0%, 100% {
+		opacity: 0;
+	}
+	40%, 60% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes anim-effect-jagoda-2 {
+	0% {
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	100% {
+		-webkit-transform: scale3d(1.4, 1.4, 1);
+		transform: scale3d(1.4, 1.4, 1);
+	}
+}
+
+@keyframes anim-effect-jagoda-2 {
+	0% {
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	100% {
+		-webkit-transform: scale3d(1.4, 1.4, 1);
+		transform: scale3d(1.4, 1.4, 1);
+	}
+}
+
+
+@-webkit-keyframes anim-effect-novak {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.1, 0.1, 1);
+		transform: scale3d(0.1, 0.1, 1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale3d(8, 8, 1);
+		transform: scale3d(8, 8, 1);
+	}
+}
+
+@keyframes anim-effect-novak {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.1, 0.1, 1);
+		transform: scale3d(0.1, 0.1, 1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale3d(8, 8, 1);
+		transform: scale3d(8, 8, 1);
+	}
+}
